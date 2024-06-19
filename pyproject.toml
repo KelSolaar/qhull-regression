@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "qhull-regression"
+version = "0.1.0"
+description = ""
+authors = ["Thomas Mansencal <thomas.mansencal@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">= 3.10, < 3.13"
+numpy = ">= 1.24, < 2"
+scipy = ">= 1.10, < 2"
+pytest = "*"
+pytest-xdist = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "-n auto --dist=loadscope"
